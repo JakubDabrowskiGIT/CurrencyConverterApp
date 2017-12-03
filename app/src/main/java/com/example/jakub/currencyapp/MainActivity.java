@@ -12,6 +12,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        final double euroValue = 0.24;
+        final double gbpValue = 0.21;
+        final double plnValue = 1;
+        final double usdValue = 0.28;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         seekbarMain = findViewById(R.id.seekBar);
@@ -28,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 mainField.setText(String.valueOf(i));
 
-                euroField.setText(String.valueOf(i*4.3)+"euro");
-                gbpField.setText(String.valueOf(i*5)+"GBP");
-                plnField.setText(String.valueOf(i)+"PLN");
-                usdField.setText(String.valueOf(i*2.8)+"USD");
+                euroField.setText(String.valueOf(i*euroValue)+"euro");
+                gbpField.setText(String.valueOf(i*gbpValue)+"GBP");
+                plnField.setText(String.valueOf(i*plnValue)+"PLN");
+                usdField.setText(String.valueOf(i*usdValue)+"USD");
 
             }
 
