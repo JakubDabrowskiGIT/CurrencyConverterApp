@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jakub.currencyapp.MainActivity">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLine1"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="vertical"
+        />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLine2"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLine3"
+        app:layout_constraintGuide_percent="0.9"
+        android:orientation="vertical"
+        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="75px"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine1"
+        app:layout_constraintRight_toRightOf="@id/guideLine3"
+        android:max="250"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choice currency"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine1"
+
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        android:textSize="40px"
+        />
+
+    <RadioButton
+        android:id="@+id/euroRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Euro(euro)"
+        app:layout_constraintTop_toBottomOf="@id/textViewChoice"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine1"
+        />
+    <RadioButton
+        android:id="@+id/usdRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD(dollar)"
+        app:layout_constraintTop_toBottomOf="@id/euroRadio"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine1"
+        />
+
+    <RadioButton
+        android:id="@+id/gbpRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GBP(funt)"
+        app:layout_constraintTop_toBottomOf="@id/usdRadio"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine1"
+        />
+    <RadioButton
+        android:id="@+id/plnRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLN"
+        android:checked="true"
+        app:layout_constraintTop_toBottomOf="@id/gbpRadio"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine1"
+        />
+
+    <TextView
+        android:id="@+id/currencyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value currency"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine2"
+        android:textSize="40px"
+        />
+
+   <TextView
+       android:id="@+id/euroText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Euro"
+       app:layout_constraintTop_toBottomOf="@id/currencyValue"
+       app:layout_constraintLeft_toLeftOf="@id/guideLine2"
+
+       />
+
+    <TextView
+        android:id="@+id/usdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD"
+        app:layout_constraintTop_toBottomOf="@id/euroText"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine2"
+        />
+
+    <TextView
+        android:id="@+id/gbpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GBP"
+        app:layout_constraintTop_toBottomOf="@id/usdText"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine2"
+        />
+
+    <TextView
+        android:id="@+id/plnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLN"
+        app:layout_constraintTop_toBottomOf="@id/gbpText"
+        app:layout_constraintLeft_toLeftOf="@id/guideLine2"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
